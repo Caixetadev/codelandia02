@@ -47,9 +47,8 @@ export const listarProdutos = () => {
     
     <div class="card">
       <div class="image">
-        <img src="${item.img}" height="500" width="500" alt="">
+        <img src="${item.img}" height="150" width="250" alt="">
       </div>
-      <span>${item.preco}</span>
     </div>
     `
     

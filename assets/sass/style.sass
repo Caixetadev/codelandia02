@@ -71,6 +71,7 @@ section
 
 .bgImage
   background: url('../img/wallpaper.jpeg')
+  background-attachment: fixed
   background-repeat: no-repeat
   background-size: cover
   background-position: center
@@ -83,24 +84,102 @@ section
     height: 100%
 
   .containerImage
-    width: 960px
+    width: 1060px
     margin: 0 auto
 
     h1
       padding-top: 130px
-      font-weight: 700
+      font-weight: bold
       font-size: 32px
       color: variables.$bgSite
       line-height: 39px
 
     p
-      width: 460px
+      width: 440px
       margin-top: 10px
       color: variables.$bgSite
-      font-size: 16px
+      font-size: 17px
       line-height: 196.19%
       font-weight: 600
 
-  
+main
+  h2
+    font-weight: 600
+    font-size: 32px
+    display: flex
+    justify-content: center
+    margin-top: 50px
+    color: variables.$title
 
-  
+  p
+    font-weight: 500
+    font-size: 18px
+    text-align: center
+    margin-top: 20px
+    color: variables.$text
+
+  .containerMain
+    margin-top: 70px
+    display: grid
+    grid-template-columns: repeat(4, auto)
+    grid-gap: 20px
+    justify-content: center
+
+    .card
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 300px
+      height: 302px
+      background: variables.$bgCard
+
+footer
+  margin-top: 70px
+  height: 60px
+  background: variables.$title
+
+  p
+    padding-top: 20px
+    color: variables.$bgSite
+    display: flex
+    justify-content: center
+
+::-webkit-scrollbar
+  width: 8px
+
+::-webkit-scrollbar-track
+  background: variables.$bgSite
+::-webkit-scrollbar-thumb
+  background: variables.$title
+
+@media (max-width: 600px)
+  html
+    overflow-x: hidden
+  main
+    .containerMain
+      grid-template-columns: repeat(1, auto)
+
+  .bgImage
+    background-size: cover
+    .containerImage
+      width: 95%
+      h1
+        font-size: 28px
+
+      p
+        font-size: 16px
+        width: 100%
+
+  footer
+    width: 100%
+
+@media (min-width: 700px) and (max-width: 1024px)
+  main
+    .containerMain
+      grid-template-columns: repeat(2, auto)
+  .bgImage
+    .containerImage
+      width: 80%
+
+      p
+        width: 100%

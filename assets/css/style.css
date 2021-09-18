@@ -80,6 +80,7 @@ section .container .bg h1 {
 
 .bgImage {
   background: url("../img/wallpaper.jpeg");
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -92,23 +93,118 @@ section .container .bg h1 {
   height: 100%;
 }
 .bgImage .containerImage {
-  width: 960px;
+  width: 1060px;
   margin: 0 auto;
 }
 .bgImage .containerImage h1 {
   padding-top: 130px;
-  font-weight: 700;
+  font-weight: bold;
   font-size: 32px;
   color: #f6f6f6;
   line-height: 39px;
 }
 .bgImage .containerImage p {
-  width: 460px;
+  width: 440px;
   margin-top: 10px;
   color: #f6f6f6;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 196.19%;
   font-weight: 600;
+}
+
+main h2 {
+  font-weight: 600;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  color: #181818;
+}
+main p {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+  color: #474747;
+}
+main .containerMain {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 20px;
+  justify-content: center;
+}
+main .containerMain .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 302px;
+  background: #ebe9ea;
+}
+
+footer {
+  margin-top: 70px;
+  height: 60px;
+  background: #181818;
+}
+footer p {
+  padding-top: 20px;
+  color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f6f6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #181818;
+}
+
+@media (max-width: 600px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  main .containerMain {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .bgImage {
+    background-size: cover;
+  }
+  .bgImage .containerImage {
+    width: 95%;
+  }
+  .bgImage .containerImage h1 {
+    font-size: 28px;
+  }
+  .bgImage .containerImage p {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+  }
+}
+@media (min-width: 700px) and (max-width: 1024px) {
+  main .containerMain {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .bgImage .containerImage {
+    width: 80%;
+  }
+  .bgImage .containerImage p {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
