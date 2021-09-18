@@ -142,6 +142,10 @@ main .containerMain .card {
   height: 302px;
   background: #ebe9ea;
 }
+main .containerMain .card img:hover {
+  transform: scale(1.3);
+  transition: 1s all ease;
+}
 
 footer {
   margin-top: 70px;

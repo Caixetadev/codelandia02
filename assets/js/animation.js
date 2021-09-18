@@ -11,4 +11,15 @@ export const seila = () => { function typeWriter(e) {
 }
 
 typeWriter(animationText)
+
+const sr = ScrollReveal({
+  distance: '60px',
+  duration: 2500,
+  delay: 400,
+  reset: true
+})
+
+sr.reveal(`.image`, {delay: 100, origin: 'top'})
+sr.reveal(`main h2`, {origin: 'top'})
+sr.reveal(`main p`, {origin: 'left'})
 }
